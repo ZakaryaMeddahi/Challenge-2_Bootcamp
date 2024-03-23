@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+  --primary-color: hsl(75, 94%, 57%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-dark-grey: hsl(0, 0%, 12%);
+  --color-off-black: hsl(0, 0%, 8%);
+  --color-grey: rgb(202, 202, 202);
+
+  --font-size: 17px;
+  --font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: var(--font-size);
+  font-family: var(--font-family);
+  background-color: var(--color-off-black);
+  color: var(--color-white);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--color-dark-grey);
+  width: -moz-fit-content; /* Firefox */
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px 0px rgb(21, 21, 21);
+}
+
+.img-container {
+  margin-bottom: 25px;
+}
+
+.img-container > img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.name {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.address {
+  color: var(--primary-color);
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.hobby {
+  color: var(--color-grey);
+  margin-bottom: 25px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+}
+
+.social-links > a {
+  background-color: rgb(55, 55, 55);
+  color: var(--color-white);
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+.social-links > a > button {
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  padding: 15px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.social-links > a:hover {
+  background-color: var(--primary-color);
+  color: var(--color-dark-grey);
+}
+
+.dialog {
+  color: var(--color-grey);
+  background-color: rgb(55, 55, 55);
+  width: 100%;
+  padding-bottom: 15px;
+  border-radius: 0 0 5px 5px;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+
+.dialog p {
+  color: var(--color-dark-grey);
+  margin-bottom: 10px;
+  position: absolute;
+  top: 0px;
+  opacity: 0;
+}
+
+.twitter-link:hover > .dialog p {
+  position: relative;
+  top: 0;
+  opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    padding: 40px;
+  }
+}
